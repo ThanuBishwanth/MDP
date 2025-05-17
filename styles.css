@@ -1,0 +1,93 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change color and opacity */
+    z-index: -1;
+}
+/* Predictor Container */
+.predictor-container {
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.predictor-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.predictor-container h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Prediction Form */
+.prediction-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input[type="number"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid blue;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="number"]:focus {
+    border-color: #4c6ef5;
+}
+
+.warning {
+    color: yellow;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    grid-column: span 2;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4c6ef5;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3b5bdb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .prediction-form {
+        grid-template-columns: 1fr;
+    }
+}
